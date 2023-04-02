@@ -1,0 +1,86 @@
+useEffect Review: 15mins
+Used to handle Actions/Statements on different stages of a component
+
+1. Mount
+2. Update
+3. Unmount
+
+// Mount & unMount --> No Dependency Array
+useEffect(() => {
+  // if needed mounting statements goes here 
+  // example: any async API calls/setTimeout/setInterval 
+
+  return () => {
+    // unmount statements goes here
+    // clean up operation
+  }
+});
+
+// Mount & Update ---> with Dependency array
+useEffect(() => {
+  // if needed mouting statements
+  // or conditional updates with the updated state value
+  // condition
+
+  if(followFlag) {
+    // set following
+  } else {
+    // un follow
+  }
+}, [followFlag, blockFlag]); // --> value of the Dependency
+
+
+React-Router-DOM:
+  Routing:
+    Handle the Different set of paths and other params
+    i.e: routing different paths to different component
+  /movies --> Listing of the movie
+  /movies/movieId ---> Only Selecte Movie
+  /addMovie --> add movie form
+  /editMovie ---> edit movie form with a movie id
+
+  BrowserRouter:
+    Help in controlling the location of the browser
+  Routes:
+    Specification or Tag to controll which component to render in which **path**
+    Layout
+      Layout for the entire application
+      Outlet
+    Link:
+      Anchor link for the path
+    URL Params hooks:
+      path-params --> useParams
+      query params --> useSearchParams
+
+useTheme hook from mui:
+  1. use theme props inside components
+  
+
+Tasks:
+  Day 24:
+    Design an UI to implement the CRUD
+    // CRUD - Create,Read,Update,Delete
+    // Dashboard
+    // List Users - /users
+    // Create User - /create-user
+    // Edit User - /edit-user/:id
+    // profile - /profile/:id
+    // edit-profile – /edit-profile/:id
+  
+  Start The Task:
+  Day 22 -> https://startbootstrap.com/previews/sb-admin-2
+
+Next Session:
+  URL State:
+      useLocation
+  2. Breakpoints with mui
+    Format Form, border with primary
+    Increase font-size
+
+  Component Design:
+    Identify the Commanalities in the application and put them together as one component
+
+  MUI Components & Hooks:
+  Grid System in MUI
+
+  styled component
